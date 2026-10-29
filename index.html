@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>K-VOGUE Admin Dashboard</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    
+    <body>
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-check">
+        
+        <div class="sidebar">
+            
+            <div class="logo">
+                <h2>K-VOGUE</h2>
+                <p>Grocery Store Management</p>
+            </div>
+            
+            <div class="adprof">
+                <div class="profpic">A</div>
+                <h3>Admin User</h3>
+                <p>Store Administrator</p>
+            </div>
+
+            <div class="menu">
+                <a href="#dashboard">⌂ &nbsp; Dashboard</a>
+                <a href="#inventory">▣ &nbsp; Product Inventory</a>
+                <a href="#orders">🛒 &nbsp; Customer Orders</a>
+                <a href="#categories">☷ &nbsp; Categories</a>
+                <a href="#sales">▥ &nbsp; Sales Report</a>
+                <a href="#settings">⚙ &nbsp; Settings</a>
+            </div>
+            
+            <label for="sidebar-toggle" class="sidebar-close">
+                ✕ Close Menu
+            </label>
+        </div>
+        
+        
+        <div class="main">
+
+            <div class="navbar">
+                
+                <label for="sidebar-toggle" class="menu-toggle">
+                    ☰ &nbsp; Admin Panel
+                </label>
+                
+                <div class="navright">
+                    <a href="#inventory" title="Inventory">⌕</a>
+                    <a href="#orders" title="Orders">🛒</a>
+                    <a href="#settings" title="Settings">⚙</a>
+                    
+                    <span>Admin</span>
+                </div>
+            </div>
+            
+            <div class="pages">
+                
+                <section id="dashboard" class="page">
+                    
+                    <div class="head">
+                        <h1>Dashboard</h1>
+                        <p>Home / Dashboard</p>
+                    </div>
+                    
+                    <div class="welcome">
+                        <h2>Welcome back, Admin!</h2>
+                        <p>Here's an overview of your grocery store.</p>
+                    </div>
+                    
+                    <div class="cards">
+                        
+                        <div class="card">
+                            <div class="cardtp">
+                                <h2>1,250</h2>
+                                <span>▣</span>
+                            </div>
+                            
+                            <p>Total Products</p>
+                            
+                            <div class="progs">
+                                <div class="bar green"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="cardtp">
+                                <h2>₱15,450</h2>
+                                <span>₱</span>
+                            </div>
+                            
+                            <p>Today's Sales</p>
+                            
+                            <div class="progs">
+                                <div class="bar blue"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="cardtp">
+                                <h2>185</h2>
+                                <span>🛒</span>
+                            </div>
+                            
+                            <p>Total Orders</p>
+                            
+                            <div class="progs">
+                                <div class="bar yellow"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card">
+                            <div class="cardtp">
+                                <h2>12</h2>
+                                <span>!</span>
+                            </div>
+                            
+                            <p>Low Stock Items</p>
+                            
+                            <div class="progs">
+                                <div class="bar red"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="records">
+                        <h2 class="sectiontitle">Quick Overview</h2>
+                        
+                        <div class="quicklinks">
+                            <a href="#inventory">▣ Manage Products →</a>
+                            <a href="#orders">🛒 View Orders →</a>
+                            <a href="#categories">☷ View Categories →</a>
+                            <a href="#sales">▥ Sales Report →</a>
+                        </div>
+                        
+                        <h2 class="sectiontitle">Stock Alerts</h2>
+                        
+                        <div class="records">
+                            <div class="tables">
+                                
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>PRODUCT</th>
+                                            <th>REMAINING</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <tr>
+                                            <td>Fresh Milk</td>
+                                            <td>8</td>
+                                            <td><span class="pending">Low Stock</span></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Cooking Oil</td>
+                                            <td>0</td>
+                                            <td><span class="outstock">Out of Stock</span></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>White Bread</td>
+                                            <td>5</td>
+                                            <td><span class="pending">Low Stock</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <section id="inventory" class="page">
+                
+                <div class="head">
+                    <h1>Product Inventory</h1>
+                    <p>Home / Inventory</p>
+                </div>
+                
+                <div class="records">
+                    <h2 class="sectiontitle">Manage Products</h2>
+                    
+                    <div class="tabtp">
+                        
+                        <div class="lefttool">
+                            <label>Entries</label>
+
+                            <select>
+                                <option>10</option>
+                                <option>25</option>
+                                <option>50</option>
+                            </select>
+
+                            <a href="#addproduct" class="add">+ Add Product</a>
+                        </div>
+
+                        <div class="righttool">
+                            <input type="search" placeholder="Search product..." aria-label="Search product">
+
+                            <select aria-label="Product status">
+                                <option>All Status</option>
+                                <option>Available</option>
+                                <option>Low Stock</option>
+                                <option>Out of Stock</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="tables">
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>PRODUCT</th>
+                                    <th>CATEGORY</th>
+                                    <th>PRICE</th>
+                                    <th>STOCK</th>
+                                    <th>STATUS</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td class="num">#P001</td>
+                                    <td>Rice (1kg)</td>
+                                    <td>Grains</td>
+                                    <td>₱55.00</td>
+                                    <td>120</td>
+                                    <td><span class="paid">Available</span></td>
+
+                                    <td>
+                                        <a href="#addproduct" class="edit">Edit</a>
+                                        <a href="#deleteinfo" class="delete">Delete</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#P002</td>
+                                    <td>Fresh Milk (1L)</td>
+                                    <td>Dairy</td>
+                                    <td>₱95.00</td>
+                                    <td>8</td>
+                                    <td><span class="pending">Low Stock</span></td>
+
+                                    <td>
+                                        <a href="#addproduct" class="edit">Edit</a>
+                                        <a href="#deleteinfo" class="delete">Delete</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#P003</td>
+                                    <td>Eggs (Tray)</td>
+                                    <td>Poultry</td>
+                                    <td>₱210.00</td>
+                                    <td>35</td>
+                                    <td><span class="paid">Available</span></td>
+
+                                    <td>
+                                        <a href="#addproduct" class="edit">Edit</a>
+                                        <a href="#deleteinfo" class="delete">Delete</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#P004</td>
+                                    <td>Cooking Oil (1L)</td>
+                                    <td>Essentials</td>
+                                    <td>₱85.00</td>
+                                    <td>0</td>
+                                    <td><span class="outstock">Out of Stock</span></td>
+
+                                    <td>
+                                        <a href="#addproduct" class="edit">Edit</a>
+                                        <a href="#deleteinfo" class="delete">Delete</a>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#P005</td>
+                                    <td>White Sugar (1kg)</td>
+                                    <td>Essentials</td>
+                                    <td>₱75.00</td>
+                                    <td>65</td>
+                                    <td><span class="paid">Available</span></td>
+
+                                    <td>
+                                        <a href="#addproduct" class="edit">Edit</a>
+                                        <a href="#deleteinfo" class="delete">Delete</a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="addproduct" class="page">
+
+                <div class="head">
+                    <h1>Product Form</h1>
+                    <p>Inventory / Product Form</p>
+                </div>
+
+                <div class="formbox">
+
+                    <div class="formhead">
+                        <h2>Product Information</h2>
+                        <a href="#inventory">✕ Close</a>
+                    </div>
+
+                    <p>Enter the grocery product details.</p>
+
+                    <form>
+
+                        <label for="product-name">Product Name</label>
+                        <input id="product-name" type="text" placeholder="Enter product name" required>
+
+                        <label for="product-category">Category</label>
+                        <select id="product-category" required>
+                            <option value="">Select Category</option>
+                            <option>Fruits &amp; Vegetables</option>
+                            <option>Meat &amp; Seafood</option>
+                            <option>Dairy &amp; Eggs</option>
+                            <option>Rice &amp; Grains</option>
+                            <option>Beverages</option>
+                            <option>Snacks</option>
+                            <option>Frozen Foods</option>
+                            <option>Household Essentials</option>
+                        </select>
+
+                        <label for="product-price">Price (₱)</label>
+                        <input id="product-price" type="number" min="0" step="0.01"
+                               placeholder="Enter product price" required>
+
+                        <label for="product-stock">Stock Quantity</label>
+                        <input id="product-stock" type="number" min="0"
+                               placeholder="Enter stock quantity" required>
+
+                        <label for="product-date">Expiration Date</label>
+                        <input id="product-date" type="date">
+
+                        <div class="formbuttons">
+                            <button type="reset">Clear</button>
+                            <button type="button" class="save">Save Product</button>
+                            <a href="#inventory" class="add">Cancel</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+            <section id="deleteinfo" class="page">
+                
+                <div class="head">
+                    <h1>Delete Product</h1>
+                    <p>Inventory / Delete</p>
+                </div>
+
+                <div class="formbox">
+                    <h2>Delete Confirmation</h2>
+                    <a href="#inventory" class="add">Back to Inventory</a>
+                </div>
+
+            </section>
+
+            <section id="orders" class="page">
+
+                <div class="head">
+                    <h1>Customer Orders</h1>
+                    <p>Home / Orders</p>
+                </div>
+
+                <div class="smallcards">
+
+                    <div class="minicard">
+                        <h2>185</h2>
+                        <p>Total Orders</p>
+                    </div>
+
+                    <div class="minicard">
+                        <h2>24</h2>
+                        <p>Pending Orders</p>
+                    </div>
+
+                    <div class="minicard">
+                        <h2>148</h2>
+                        <p>Completed Orders</p>
+                    </div>
+
+                    <div class="minicard">
+                        <h2>13</h2>
+                        <p>Cancelled Orders</p>
+                    </div>
+
+                </div>
+
+                <div class="records">
+
+                    <h2 class="sectiontitle">Order Records</h2>
+
+                    <div class="tabtp">
+
+                        <div class="lefttool">
+                            <label>Customer Transactions</label>
+                        </div>
+
+                        <div class="righttool">
+                            <input type="search" placeholder="Search order..." aria-label="Search order">
+
+                            <select aria-label="Order status">
+                                <option>All Orders</option>
+                                <option>Pending</option>
+                                <option>Completed</option>
+                                <option>Cancelled</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="tables">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ORDER ID</th>
+                                    <th>CUSTOMER</th>
+                                    <th>DATE</th>
+                                    <th>ITEMS</th>
+                                    <th>TOTAL</th>
+                                    <th>STATUS</th>
+                                    <th>DETAILS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td class="num">#ORD001</td>
+                                    <td>Maria Santos</td>
+                                    <td>Oct 11, 2026</td>
+                                    <td>4</td>
+                                    <td>₱550.00</td>
+                                    <td><span class="paid">Completed</span></td>
+                                    <td><a href="#order1" class="edit">View</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#ORD002</td>
+                                    <td>John Reyes</td>
+                                    <td>Oct 11, 2026</td>
+                                    <td>3</td>
+                                    <td>₱325.00</td>
+                                    <td><span class="pending">Pending</span></td>
+                                    <td><a href="#order2" class="edit">View</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#ORD003</td>
+                                    <td>Anna Cruz</td>
+                                    <td>Oct 10, 2026</td>
+                                    <td>5</td>
+                                    <td>₱780.00</td>
+                                    <td><span class="paid">Completed</span></td>
+                                    <td><a href="#order3" class="edit">View</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#ORD004</td>
+                                    <td>Mark Dela Cruz</td>
+                                    <td>Oct 10, 2026</td>
+                                    <td>2</td>
+                                    <td>₱190.00</td>
+                                    <td><span class="outstock">Cancelled</span></td>
+                                    <td><a href="#order4" class="edit">View</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="order1" class="page">
+
+                <div class="head">
+                    <h1>Order Details</h1>
+                    <p>Orders / #ORD001</p>
+                </div>
+
+                <div class="formbox">
+
+                    <h2>Order #ORD001</h2>
+                    <p><strong>Customer:</strong> Maria Santos</p>
+                    <p><strong>Date:</strong> October 11, 2026</p>
+                    <p><strong>Status:</strong> Completed</p>
+
+                    <h3>Purchased Items</h3>
+
+                    <div class="tables">
+                        <table>
+
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>QTY</th>
+                                <th>SUBTOTAL</th>
+                            </tr>
+
+                            <tr><td>Rice (1kg)</td><td>2</td><td>₱110</td></tr>
+                            <tr><td>Fresh Milk</td><td>2</td><td>₱190</td></tr>
+                            <tr><td>White Sugar</td><td>2</td><td>₱150</td></tr>
+                            <tr><td>Eggs (5 pcs)</td><td>1</td><td>₱100</td></tr>
+                            <tr><th>TOTAL</th><th></th><th>₱550</th></tr>
+                        </table>
+
+                    </div>
+
+                    <a href="#orders" class="add">← Back to Orders</a>
+
+                </div>
+
+            </section>
+
+            <section id="order2" class="page">
+
+                <div class="head">
+                    <h1>Order Details</h1>
+                    <p>Orders / #ORD002</p>
+                </div>
+
+                <div class="formbox">
+
+                    <h2>Order #ORD002</h2>
+                    <p><strong>Customer:</strong> John Reyes</p>
+                    <p><strong>Status:</strong> Pending</p>
+
+                    <div class="tables">
+                        <table>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>QTY</th>
+                                <th>SUBTOTAL</th>
+                            </tr>
+                            <tr><td>Fresh Milk</td><td>1</td><td>₱95</td></tr>
+                            <tr><td>Eggs</td><td>1</td><td>₱210</td></tr>
+                            <tr><td>Instant Noodles</td><td>1</td><td>₱20</td></tr>
+                            <tr><th>TOTAL</th><th></th><th>₱325</th></tr>
+                        </table>
+                    </div>
+
+                    <a href="#orders" class="add">← Back to Orders</a>
+
+                </div>
+
+            </section>
+
+
+            <section id="order3" class="page">
+
+                <div class="head">
+                    <h1>Order Details</h1>
+                    <p>Orders / #ORD003</p>
+                </div>
+
+                <div class="formbox">
+                    <h2>Order #ORD003</h2>
+                    <p>Customer: Anna Cruz</p>
+                    <p>Total: ₱780.00</p>
+                    <p>Status: Completed</p>
+                    <a href="#orders" class="add">← Back to Orders</a>
+                </div>
+
+            </section>
+
+            <section id="order4" class="page">
+
+                <div class="head">
+                    <h1>Order Details</h1>
+                    <p>Orders / #ORD004</p>
+                </div>
+
+                <div class="formbox">
+                    <h2>Order #ORD004</h2>
+                    <p>Customer: Mark Dela Cruz</p>
+                    <p>Total: ₱190.00</p>
+                    <p>Status: Cancelled</p>
+                    <a href="#orders" class="add">← Back to Orders</a>
+                </div>
+
+            </section>
+
+            <section id="categories" class="page">
+
+                <div class="head">
+                    <h1>Product Categories</h1>
+                    <p>Home / Categories</p>
+                </div>
+
+                <div class="records">
+
+                    <div class="categoryhead">
+                        
+                        <div>
+                            <h2>Grocery Categories</h2>
+                            <p>Organize products according to their type.</p>
+                        </div>
+
+                        <a href="#addcategory" class="add">+ Add Category</a>
+                    </div>
+
+                    <div class="categorygrid">
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🥬</span>
+                                <h3>Fruits &amp; Vegetables</h3>
+                                <p>Fresh produce</p>
+                            </summary>
+                            <ul>
+                                <li>Apples</li>
+                                <li>Bananas</li>
+                                <li>Carrots</li>
+                                <li>Tomatoes</li>
+                                <li>Potatoes</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🥩</span>
+                                <h3>Meat &amp; Seafood</h3>
+                                <p>Fresh meat and fish</p>
+                            </summary>
+                            <ul>
+                                <li>Chicken</li>
+                                <li>Pork</li>
+                                <li>Beef</li>
+                                <li>Fish</li>
+                                <li>Shrimp</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🥛</span>
+                                <h3>Dairy &amp; Eggs</h3>
+                                <p>Milk and dairy products</p>
+                            </summary>
+                            <ul>
+                                <li>Fresh Milk</li>
+                                <li>Cheese</li>
+                                <li>Butter</li>
+                                <li>Yogurt</li>
+                                <li>Eggs</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🍚</span>
+                                <h3>Rice &amp; Grains</h3>
+                                <p>Daily food staples</p>
+                            </summary>
+                            <ul>
+                                <li>White Rice</li>
+                                <li>Brown Rice</li>
+                                <li>Oats</li>
+                                <li>Corn</li>
+                                <li>Flour</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🥤</span>
+                                <h3>Beverages</h3>
+                                <p>Drinks and refreshments</p>
+                            </summary>
+                            <ul>
+                                <li>Water</li>
+                                <li>Juice</li>
+                                <li>Coffee</li>
+                                <li>Tea</li>
+                                <li>Soft Drinks</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🍪</span>
+                                <h3>Snacks</h3>
+                                <p>Packaged snack products</p>
+                            </summary>
+                            <ul>
+                                <li>Biscuits</li>
+                                <li>Chips</li>
+                                <li>Chocolate</li>
+                                <li>Cookies</li>
+                                <li>Candies</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🧊</span>
+                                <h3>Frozen Foods</h3>
+                                <p>Ready-to-cook products</p>
+                            </summary>
+                            <ul>
+                                <li>Hotdogs</li>
+                                <li>Nuggets</li>
+                                <li>Frozen Vegetables</li>
+                                <li>Ice Cream</li>
+                                <li>Frozen Fish</li>
+                            </ul>
+                        </details>
+
+                        <details class="categorycard">
+                            <summary>
+                                <span>🧹</span>
+                                <h3>Household Essentials</h3>
+                                <p>Home and cleaning supplies</p>
+                            </summary>
+                            <ul>
+                                <li>Detergent</li>
+                                <li>Dishwashing Liquid</li>
+                                <li>Tissue</li>
+                                <li>Soap</li>
+                                <li>Trash Bags</li>
+                            </ul>
+                        </details>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="addcategory" class="page">
+
+                <div class="head">
+                    <h1>Add Category</h1>
+                    <p>Categories / Add New</p>
+                </div>
+
+                <div class="formbox">
+
+                    <div class="formhead">
+                        <h2>Category Information</h2>
+                        <a href="#categories">✕ Close</a>
+                    </div>
+
+                    <form>
+
+                        <label for="category-name">Category Name</label>
+                        <input id="category-name" type="text"
+                               placeholder="Enter category name" required>
+
+                        <label for="category-description">Description</label>
+                        <textarea id="category-description" rows="4"
+                                  placeholder="Enter description"></textarea>
+
+                        <div class="formbuttons">
+                            <button type="reset">Clear</button>
+                            <button type="button" class="save">Save Category</button>
+                            <a href="#categories" class="add">Cancel</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+            <section id="sales" class="page">
+
+                <div class="head">
+                    <h1>Sales Report</h1>
+                    <p>Home / Sales Report</p>
+                </div>
+
+                <div class="smallcards">
+
+                    <div class="minicard">
+                        <h2>₱15,450</h2>
+                        <p>Today's Sales</p>
+                    </div>
+
+                    <div class="minicard">
+                        <h2>₱98,750</h2>
+                        <p>Weekly Sales</p>
+                    </div>
+
+                    <div class="minicard">
+                        <h2>₱425,600</h2>
+                        <p>Monthly Sales</p>
+                    </div>
+
+                    <div class="minicard">
+                        <h2>185</h2>
+                        <p>Total Orders</p>
+                    </div>
+
+                </div>
+
+                <div class="records">
+
+                    <h2 class="sectiontitle">Sales Overview</h2>
+
+                    <div class="chart">
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 50%"></div>
+                            <p>Mon</p>
+                        </div>
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 75%"></div>
+                            <p>Tue</p>
+                        </div>
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 60%"></div>
+                            <p>Wed</p>
+                        </div>
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 90%"></div>
+                            <p>Thu</p>
+                        </div>
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 65%"></div>
+                            <p>Fri</p>
+                        </div>
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 100%"></div>
+                            <p>Sat</p>
+                        </div>
+
+                        <div class="chartitem">
+                            <div class="chartbar" style="height: 80%"></div>
+                            <p>Sun</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="records">
+
+                    <h2 class="sectiontitle">Recent Transactions</h2>
+
+                    <div class="tables">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>TRANSACTION</th>
+                                    <th>DATE</th>
+                                    <th>CUSTOMER</th>
+                                    <th>AMOUNT</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="num">#TX001</td>
+                                    <td>Oct 11, 2026</td>
+                                    <td>Maria Santos</td>
+                                    <td>₱550</td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#TX002</td>
+                                    <td>Oct 11, 2026</td>
+                                    <td>John Reyes</td>
+                                    <td>₱325</td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="num">#TX003</td>
+                                    <td>Oct 10, 2026</td>
+                                    <td>Anna Cruz</td>
+                                    <td>₱780</td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="settings" class="page">
+
+                <div class="head">
+                    <h1>Settings</h1>
+                    <p>Home / Settings</p>
+                </div>
+
+                <details class="settingbox" open>
+
+                    <summary>🏪 Store Information</summary>
+
+                    <form>
+
+                        <label for="store-name">Store Name</label>
+                        <input id="store-name" type="text" value="K-VOGUE">
+
+                        <label for="store-email">Store Email</label>
+                        <input id="store-email" type="email" value="kvogue@gmail.com">
+
+                        <label for="store-contact">Contact Number</label>
+                        <input id="store-contact" type="tel" placeholder="09XXXXXXXXX">
+
+                        <label for="store-address">Store Address</label>
+                        <textarea id="store-address" rows="3"
+                                  placeholder="1742 Rosana L. Bloc 2 Pasay"></textarea>
+
+                        <label for="opening-time">Opening Time</label>
+                        <input id="opening-time" type="time" value="08:00">
+
+                        <label for="closing-time">Closing Time</label>
+                        <input id="closing-time" type="time" value="22:00">
+
+                        <div class="formbuttons">
+                            <button type="button" class="save">Save Changes</button>
+                            <button type="reset">Reset</button>
+                        </div>
+
+                    </form>
+
+                </details>
+
+                <details class="settingbox">
+
+                    <summary>👤 Admin Account</summary>
+
+                    <form>
+
+                        <label for="admin-name">Full Name</label>
+                        <input id="admin-name" type="text" value="Admin User">
+
+                        <label for="admin-username">Username</label>
+                        <input id="admin-username" type="text" value="admin">
+
+                        <label for="admin-email">Email Address</label>
+                        <input id="admin-email" type="email" value="admin@gmail.com">
+
+                        <label for="admin-password">New Password</label>
+                        <input id="admin-password" type="password"
+                               placeholder="Enter new password">
+
+                        <label for="confirm-password">Confirm Password</label>
+                        <input id="confirm-password" type="password"
+                               placeholder="Confirm new password">
+
+                        <div class="formbuttons">
+                            <button type="button" class="save">Update Account</button>
+                            <button type="reset">Reset</button>
+                        </div>
+
+                    </form>
+
+                </details>
+
+                <details class="settingbox">
+
+                    <summary>🔔 Notifications</summary>
+
+                    <div class="checksetting">
+
+                        <label>
+                            <input type="checkbox" checked>
+                            Low Stock Alerts
+                        </label>
+
+                        <label>
+                            <input type="checkbox" checked>
+                            New Order Notifications
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Daily Sales Summary
+                        </label>
+
+                        <label>
+                            <input type="checkbox" checked>
+                            Out of Stock Alerts
+                        </label>
+
+                    </div>
+
+                    <button type="button" class="save">Save Preferences</button>
+
+                </details>
+
+                <details class="settingbox">
+
+                    <summary>▣ Inventory Preferences</summary>
+
+                    <form>
+
+                        <label for="stock-level">Low Stock Alert Level</label>
+                        <input id="stock-level" type="number" value="10" min="0">
+
+                        <label for="currency">Default Currency</label>
+                        <select id="currency">
+                            <option>PHP - Philippine Peso</option>
+                        </select>
+
+                        <label for="default-category">Default Product Category</label>
+                        <select id="default-category">
+                            <option>None</option>
+                            <option>Fruits &amp; Vegetables</option>
+                            <option>Meat &amp; Seafood</option>
+                            <option>Dairy &amp; Eggs</option>
+                            <option>Rice &amp; Grains</option>
+                            <option>Beverages</option>
+                            <option>Snacks</option>
+                            <option>Frozen Foods</option>
+                            <option>Household Essentials</option>
+                        </select>
+
+                        <div class="formbuttons">
+                            <button type="button" class="save">Save Preferences</button>
+                        </div>
+
+                    </form>
+
+                </details>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
